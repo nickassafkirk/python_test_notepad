@@ -1,0 +1,15 @@
+.col-md-5 img{
+    width: 100%;
+}
+
+.featurette{
+    display: flex;
+    margin-top: 5%;
+    align-items: top;
+}
+
+.featurette p{
+    border-top: 1px solid #333;
+    padding: 5%;
+}
+
