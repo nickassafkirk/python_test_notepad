@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, render_template
 # we import the flask class from Flask dependency
 
@@ -27,7 +28,11 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html", page_title="About")
+    with open("data/company.json", "r") as json_data:
+        # open's json file read-only and saves as variable json_data
+        data = json.load(json_data)
+    return render_template(
+        "about.html", page_title="About", company=data)
 
 
 @app.route("/contact")
